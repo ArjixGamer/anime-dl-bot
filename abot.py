@@ -5,7 +5,7 @@ import time
 import json
 from anime_downloader.sites import get_anime_class
 import testkeys #my personal token
-Provider = get_anime_class('animeout')
+Provider = get_anime_class('animeflix')
 testkey = testkeys.token() #Secret token
 token = testkey.anime
 bot = commands.Bot(command_prefix='')
