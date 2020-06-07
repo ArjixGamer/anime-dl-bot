@@ -229,8 +229,6 @@ async def on_message(message):
 
 		if message.content == '!help':
 			await message.channel.send('a *anime* to search\ns *number* to select anime\ne *number* to select episode\nl to list search')
-		if 'ping' in message.content:
-			await message.channel.send(f'Pong! {round(bot.latency * 1000)}ms')
 
 		if message.author.id == owner:
 			if message.content == ('!anime update git'):
@@ -265,8 +263,9 @@ def Search(query,Provider):
 	results += '```'
 	print(results)
 	return(results,search)
-
-
+@bot.command()
+async def ping(ctx):
+	await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 @bot.event
 async def on_ready():
 	#game = discord.Game("with ur mom")
