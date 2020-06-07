@@ -229,7 +229,7 @@ async def on_message(message):
 
 		if message.content == '!help':
 			await message.channel.send('a *anime* to search\ns *number* to select anime\ne *number* to select episode\nl to list search')
-		if message.content == '!ping':
+		if 'ping' in message.content:
 			await message.channel.send(f'Pong! {round(bot.latency * 1000)}ms')
 
 		if message.author.id == owner:
